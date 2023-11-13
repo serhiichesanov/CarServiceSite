@@ -1,0 +1,110 @@
+*{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    color: white;
+}
+
+.profile-user{
+    display: flex;
+    top: 10%;
+    left: 15%;
+    transform: translateY(10%);
+    background-color: transparent;
+    align-items: center;
+    border: 5px gray dashed;
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    width: 65%;
+}
+
+.photo-user{ 
+    text-align: center;
+    height: 25%;
+    width: 100px;
+    border-radius: 50%; 
+    border: 5px solid #ccc;
+    margin-left: 30px;
+    margin-top: 123px;
+}
+
+.img-user{
+    border-radius: 50%; 
+    width: 90px;
+    height: 100%;
+}
+
+.info{
+    display: block;
+}
+
+.full-name{
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+    margin-left: 25px;
+}
+
+.left{
+    width: 40%;
+    display: flex;
+    height: 100%;
+}
+
+.buttons-user{
+    display: block;
+    text-align: center;
+    height: 100px;
+
+}
+
+.right{
+    width: 60%;
+    display: flex;
+}
+
+.home{
+    height: 50%;
+    text-align: center;
+}
+
+.btn-user{
+    transform: translateY(100%);
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+input{
+    display:flex;
+    width:65%;
+    text-align: left;
+    margin-top: 10px;
+    padding:10px;
+    border-radius:10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
+    color: black;
+  }
+
+.input-group{
+    display: block;
+    margin: 10px;
+}

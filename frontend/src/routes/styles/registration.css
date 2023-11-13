@@ -1,0 +1,49 @@
+.title1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.btn-registration{
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 300px;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.home-registration{
+  padding: 50px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.registration {
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  border: 5px gray dashed;
+  text-align: center;
+  height: 740px;
+  width: 50%;
+}
+
+.buttons-registration{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}

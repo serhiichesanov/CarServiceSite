@@ -1,0 +1,51 @@
+from app import app
+from models import User
+from RestAPI.schema import UserSchema
+from flask import request
+import bcrypt
+
+from RestAPI.utils_db import (
+    create_entry,
+    get_entries,
+    get_entry_by_id,
+    get_entry_by_username,
+    update_entry_by_id,
+    delete_entry_by_id,
+)
+
+
+@app.route("/user", methods=["POST"])
+def create_user():
+    user_data = UserSchema().load(request.get_json())
+
+    pwd = request.json.get('password', None)
+    hashed_pwd = bcrypt.hashpw(pwd.encode("utf-8"), bcrypt.gensalt())
+    user_data.update({"password": hashed_pwd})
+
+    return create_entry(User, UserSchema, **user_data)
+
+
+@app.route("/user", methods=["GET"])
+def get_user():
+    return get_entries(User, UserSchema)
+
+
+@app.route("/user/<int:id>", methods=["GET"])
+def get_user_by_id(id):
+    return get_entry_by_id(User, UserSchema, id)
+
+
+@app.route("/user/<string:userName>", methods=["GET"])
+def get_user_by_username(userName):
+    return get_entry_by_username(User, UserSchema, userName)
+
+
+@app.route("/user/<int:id>", methods=["PUT"])
+def update_user_by_id(id):
+    user_data = UserSchema().load(request.get_json())
+    return update_entry_by_id(User, UserSchema, id, **user_data)
+
+
+@app.route("/user/<int:id>", methods=["DELETE"])
+def delete_user_by_id(id):
+    return delete_entry_by_id(User, UserSchema, id)

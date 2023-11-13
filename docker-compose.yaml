@@ -1,0 +1,32 @@
+version: '2.23'
+
+services:
+  db:
+    image: mysql:latest
+    hostname: db_host
+    environment:
+      MYSQL_ROOT_PASSWORD: sss
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3307:3306"
+  backend:
+    build:
+      context: ./BackEnd
+    restart: always
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
+    environment:
+      DATABASE_CONNECT: mysql+pymysql://root:sss@db_host/mydb
+  frontend:
+    image: lordr3s/lab2:1.0
+    build:
+      context: ./frontend  # Directory where your React app resides
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=localhost:3000

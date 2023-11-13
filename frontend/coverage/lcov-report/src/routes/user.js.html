@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/routes/user.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/routes</a> user.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './styles/user.css';
+import axios from 'axios';
+import icon from './styles/pictures/profile.jfif'
+&nbsp;
+export default function <span class="fstat-no" title="function not covered" >User(</span>){
+    const [user, setUser] = <span class="cstat-no" title="statement not covered" >useState(</span>
+        JSON.parse(window.localStorage.getItem('userData')) || {},
+    );
+    
+    const [userInfo, setUserInfo] = <span class="cstat-no" title="statement not covered" >useState([]);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+        const requestURL = <span class="cstat-no" title="statement not covered" >`http://localhost:8000/user/${user.username}`;</span>
+<span class="cstat-no" title="statement not covered" >        axios.get(requestURL)</span>
+            .then(<span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+<span class="cstat-no" title="statement not covered" >                setUser(data);</span>
+            });
+    }, []);
+&nbsp;
+&nbsp;
+    const [oldUser, setOldUser] = <span class="cstat-no" title="statement not covered" >useState(</span>
+        { oldPassword: user.password, oldUsername: user.username } || '',
+    );
+&nbsp;
+    const navigate = <span class="cstat-no" title="statement not covered" >useNavigate();</span>
+    
+    const saveData = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        e.preventDefault();</span>
+        const requestURL = <span class="cstat-no" title="statement not covered" >`http://localhost:8000/user/${user.username}`;</span>
+        const token = <span class="cstat-no" title="statement not covered" >btoa(`${user.username}:${user.password}`);</span>
+<span class="cstat-no" title="statement not covered" >        axios.put(requestURL, user, {</span>
+            headers: {
+                Authorization: `Basic ${token}`,
+            },
+        })
+            .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                setOldUser({ oldPassword: user.password, oldUsername: user.username });</span>
+<span class="cstat-no" title="statement not covered" >                alert('Дані оновлено');</span>
+            })
+            .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >                alert(err.response.data);</span>
+            });
+    };
+&nbsp;
+    const logout = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(o</span>ut) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        out.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >        setUser({</span>
+            username: undefined,
+            firsName: undefined,
+            lastName: undefined,
+            email: undefined,
+            password: undefined,
+            phone: undefined,
+        });
+<span class="cstat-no" title="statement not covered" >        alert('Ви вийшли з акаунту');</span>
+<span class="cstat-no" title="statement not covered" >        window.localStorage.clear();</span>
+<span class="cstat-no" title="statement not covered" >        navigate('/login');</span>
+    };
+&nbsp;
+    const deleteData = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>el) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        del.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >        setUser({</span>
+            username: undefined,
+            firstName: undefined,
+            lastName: undefined,
+            email: undefined,
+            password: undefined,
+            phone: undefined,
+        });
+        const requestURL = <span class="cstat-no" title="statement not covered" >`http://localhost:8000/user/${oldUser.oldUsername}`;</span>
+        const token = <span class="cstat-no" title="statement not covered" >btoa(`${oldUser.oldUsername}:${oldUser.oldPassword}`);</span>
+<span class="cstat-no" title="statement not covered" >        axios.delete(requestURL, {</span>
+            headers: {
+                Authorization: `Basic ${token}`,
+            },
+        })
+            .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                setOldUser({ oldPassword: undefined, oldUsername: undefined });</span>
+<span class="cstat-no" title="statement not covered" >                alert('Користучач був видалений');</span>
+<span class="cstat-no" title="statement not covered" >                window.localStorage.clear();</span>
+            })
+            .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >                alert(err.response.data);</span>
+            });
+<span class="cstat-no" title="statement not covered" >        navigate('/login');</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return(</span>
+        &lt;div&gt;
+          &lt;div class="profile-user"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="info"&gt;
+                        &lt;div class="photo-user"&gt;
+                            &lt;img alt="" className="img-user"/&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;  
+                    &lt;div class="buttons-user"&gt;
+                        &lt;button class="btn-user" type="submit" data-testid="edit" name="" value="Edit" onClick={saveData}&gt;Edit&lt;/button&gt;
+                        &lt;button class="btn-user" type="submit" data-testid="logout" name="" value="Log out" onClick={logout}&gt;Logout&lt;/button&gt;
+                        &lt;button class="btn-user" type="submit" data-testid="delete" name="" value="Delete" onClick={deleteData}&gt;Delete&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="input-group-user"&gt;
+                        username&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="username-input" name="" type="text" value={user.username} align="center" placeholder="username" readOnly/&gt;
+                        &lt;br/&gt;Password&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="password-input" name="" type="text" value={user.password} align="center" placeholder="password"
+                        onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setUser(<span class="fstat-no" title="function not covered" >(p</span>rev) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...prev, password: e.target.value })</span>)}</span>/&gt;
+                        &lt;br/&gt;Email&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="email-input" name="" type="text" value={user.email} align="center" placeholder="email"
+                        onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setUser(<span class="fstat-no" title="function not covered" >(p</span>rev) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...prev, email: e.target.value })</span>)}</span>/&gt;
+                    &lt;/div&gt;
+                    &lt;div class="input-group-user"&gt;
+                        First name&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="firstName-input" name="" type="text" value={userInfo.firstName} align="center" placeholder="first name"
+                        onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setUser(<span class="fstat-no" title="function not covered" >(p</span>rev) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...prev, firstName: e.target.value })</span>)}</span>/&gt;
+                        &lt;br/&gt;Last name&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="lastName-input" name="" type="text" value={userInfo.lastName} align="center" placeholder="last name"
+                        onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setUser(<span class="fstat-no" title="function not covered" >(p</span>rev) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...prev, lastName: e.target.value })</span>)}</span>/&gt;
+                        &lt;br/&gt;Phone&lt;br/&gt;
+                        &lt;input class="input-user" data-testid="phone-input" name="" type="text" value={userInfo.phone} align="center" placeholder="phonr"
+                        onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >setUser(<span class="fstat-no" title="function not covered" >(p</span>rev) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...prev, phone: e.target.value })</span>)}</span>/&gt;
+                    &lt;/div&gt;   
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="home"&gt;
+                &lt;Link to="/home"&gt;&lt;button class="btn"&gt;Home&lt;/button&gt;&lt;/Link&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jun 16 2022 01:39:56 GMT+0300 (Восточная Европа, летнее время)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

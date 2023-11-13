@@ -1,0 +1,70 @@
+* {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: #FFF;
+}
+  
+body{
+  background-image: url('pictures/bg.jfif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+html{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-home{
+  margin: 35px;
+  font-size: 20px;
+  padding: 15px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 300px;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.centered-home{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+}
+
+.signup-home{
+  font-style: italic;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 650px;
+}
+/*# sourceMappingURL=home.css.map */

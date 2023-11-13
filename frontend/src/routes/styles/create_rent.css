@@ -1,0 +1,76 @@
+* {
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #FFF;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+.title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  
+  .btn {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-size: 200% auto;
+    -webkit-box-shadow: 0 0 20px #eee;
+      box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 300px;
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: transparent;
+  }
+  
+.home {
+    padding: 50px;
+    text-align: center;
+}
+  
+.create-rent {
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    border: 5px gray dashed;
+    text-align: center;
+    height: 500px;
+    width: 50%;
+}
+  
+.buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 25px;
+}
+  
+.form {
+    text-align: center;
+    width: 100%;
+}
+  
+  input {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    -webkit-transition: .3s border-color;
+    transition: .3s border-color;
+  }
+  
+  input:hover {
+    border: 1px solid #aaa;
+  }
+  /*# sourceMappingURL=registration.css.map */

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/routes/login.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/routes</a> login.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
+import './styles/login.css'
+import axios from "axios";
+&nbsp;
+export default function Login() {
+    const [userLog, setUserLog] = useState(
+        JSON.parse(window.localStorage.getItem('userData')) || '',
+    );
+    const navigate = useNavigate();
+    const handleSubmit = (reg) =&gt; {
+        reg.preventDefault();
+        const requestURL = 'http://localhost:8000/login';
+        axios.post(requestURL, userLog)
+            .then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; {
+<span class="cstat-no" title="statement not covered" >                window.localStorage.setItem('userData', res.config.data);</span>
+<span class="cstat-no" title="statement not covered" >                alert('Ви увійшли в акаунт');</span>
+<span class="cstat-no" title="statement not covered" >                navigate('/home');</span>
+            })
+            .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >                if(userLog.username == undefined || userLog.password == undefined){</span>
+<span class="cstat-no" title="statement not covered" >                    alert("Не всі дані введені")</span>
+                }
+                else{
+<span class="cstat-no" title="statement not covered" >                    alert("Такого користувача не існує")</span>
+                }
+            });
+    };
+&nbsp;
+    return (
+        &lt;div&gt;
+            &lt;div className="title"&gt;
+                 Login
+            &lt;/div&gt;
+            &lt;div className="login"&gt;
+            &lt;form className="form"&gt;
+                &lt;br/&gt;Username&lt;br/&gt;
+                &lt;input data-testid="username" name="username" type="text" align="center" placeholder="username"
+                        required onChange={(e) =&gt; setUserLog((prev) =&gt; ({ ...prev, username: e.target.value}))}/&gt;
+                &lt;br/&gt;Password&lt;br/&gt;
+                &lt;input  data-testid="password" name="password" type="text" align="center" placeholder="password"
+                        required onChange={(e) =&gt; setUserLog((prev) =&gt; ({ ...prev, password: e.target.value}))}/&gt;
+            &lt;/form&gt;
+            &lt;div className="buttons-login"&gt;
+                &lt;br/&gt;&lt;button className="btn btn-login" data-testid="login" type="submit" name="login" value="login" onClick={handleSubmit}&gt;&lt;i&gt;Log in&lt;/i&gt;&lt;/button&gt;
+                &lt;Link to="/registration"&gt;&lt;button className="btn"&gt;Registration&lt;/button&gt;&lt;/Link&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+            &lt;div class="home-login"&gt;
+                &lt;Link to="/home"&gt;&lt;button className="btn"&gt;Home&lt;/button&gt;&lt;/Link&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    );
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jun 16 2022 01:39:56 GMT+0300 (Восточная Европа, летнее время)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
